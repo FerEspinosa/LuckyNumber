@@ -3,4 +3,7 @@
     <string name="your_lucky_number_is">Your lucky number is:</string>
     <string name="_888">888</string>
     <string name="share_my_lucky_number">Share my lucky number</string>
+    <string name="welcome_message">Welcome to Lucky number</string>
+    <string name="name_prompt">Please enter your name</string>
+    <string name="wish_me_luck">Wish me luck!</string>
 </resources>
