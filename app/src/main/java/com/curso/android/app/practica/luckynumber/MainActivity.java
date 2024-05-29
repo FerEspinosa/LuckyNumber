@@ -15,8 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText username;
-    Button button;
+    EditText et_username;
+    Button btn_submit;
     String name;
 
     @Override
@@ -29,19 +29,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        username = findViewById(R.id.editText);
-        button = findViewById(R.id.button);
-        button.setOnClickListener(this::goToSecondActivity);
+        et_username = findViewById(R.id.editText);
+        btn_submit = findViewById(R.id.button);
+        btn_submit.setOnClickListener(this::goToSecondActivity);
 
     }
 
-    public String getUsername () {
-        return username.getText().toString();
+    public String getUserName() {
+        return et_username.getText().toString();
     }
 
     public void goToSecondActivity (View view) {
         Intent intent = new Intent(this, SecondActivity.class);
-        name = getUsername();
+        name = getUserName();
         Toast.makeText(this, "Hello " + name, Toast.LENGTH_SHORT).show();
         intent.putExtra("name", name);
         startActivity(intent);
