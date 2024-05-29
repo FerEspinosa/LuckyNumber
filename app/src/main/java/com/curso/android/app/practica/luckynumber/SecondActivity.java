@@ -35,9 +35,7 @@ public class SecondActivity extends AppCompatActivity {
 
         setLuckyNumber();
 
-        shareButton.setOnClickListener(v -> {
-            shareText();
-        });
+        shareButton.setOnClickListener(v -> shareText());
     }
 
     private void shareText() {
